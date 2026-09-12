@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel de dados micrometeorológicos</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="panel-header">
+  <div class="wrap">
+    <h1>painel de dados micrometeorológicos</h1>
+    <a class="back" href="index.html">← voltar</a>
+  </div>
+</header>
+
+<section class="controls">
+  <div class="wrap">
+    <div class="grid">
+      <div class="field">
+        <label>TABELA</label>
+        <div class="table-toggle">
+          <button type="button" class="active" data-table="tm">TM · meteorológica</button>
+          <button type="button" data-table="ti">TI · diagnóstico</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>VARIÁVEL</label>
+        <select id="variable"></select>
+      </div>
+      <div class="field">
+        <label>DE</label>
+        <input type="date" id="from">
+      </div>
+      <div class="field">
+        <label>ATÉ</label>
+        <input type="date" id="to">
+      </div>
+      <div class="field">
+        <button class="btn" id="apply" type="button">Aplicar filtro</button>
+      </div>
+    </div>
+    <div class="status idle" id="status"><span class="dot"></span>iniciando…</div>
+  </div>
+</section>
+
+<section class="chart-zone">
+  <div class="wrap">
+    <div id="chart"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="summary" id="summary"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Consulta executada localmente em IndexedDB, com reamostragem LTTB para intervalos grandes.</p>
+  </div>
+</footer>
+
+<script src="assets/js/cloud-cursor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

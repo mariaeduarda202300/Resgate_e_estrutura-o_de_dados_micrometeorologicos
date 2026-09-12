@@ -1,0 +1,146 @@
+{
+  "ti": {
+    "columns": [
+      "Batt_volt_Min",
+      "PTemp",
+      "diags2",
+      "diag_irga",
+      "diags1"
+    ],
+    "label": "Diagnósticos do Sistema (TI)",
+    "resolution": "1 min",
+    "min": "2014-06-27 11:58:00",
+    "max": "2014-07-03 13:30:00",
+    "count": 8733,
+    "files": [
+      {
+        "date": "2014-06-27",
+        "count": 722,
+        "file": "2014-06-27.json"
+      },
+      {
+        "date": "2014-06-28",
+        "count": 1440,
+        "file": "2014-06-28.json"
+      },
+      {
+        "date": "2014-06-29",
+        "count": 1440,
+        "file": "2014-06-29.json"
+      },
+      {
+        "date": "2014-06-30",
+        "count": 1440,
+        "file": "2014-06-30.json"
+      },
+      {
+        "date": "2014-07-01",
+        "count": 1440,
+        "file": "2014-07-01.json"
+      },
+      {
+        "date": "2014-07-02",
+        "count": 1440,
+        "file": "2014-07-02.json"
+      },
+      {
+        "date": "2014-07-03",
+        "count": 811,
+        "file": "2014-07-03.json"
+      }
+    ]
+  },
+  "tm": {
+    "columns": [
+      "RG",
+      "NR",
+      "AirTC",
+      "RH",
+      "FSOLO"
+    ],
+    "label": "Dados Meteorológicos (TM)",
+    "resolution": "1 seg",
+    "min": "2014-06-27 11:55:11",
+    "max": "2014-07-03 13:30:26",
+    "count": 523978,
+    "files": [
+      {
+        "date": "2014-06-27",
+        "count": 43351,
+        "file": "2014-06-27.json"
+      },
+      {
+        "date": "2014-06-28",
+        "count": 86400,
+        "file": "2014-06-28.json"
+      },
+      {
+        "date": "2014-06-29",
+        "count": 86400,
+        "file": "2014-06-29.json"
+      },
+      {
+        "date": "2014-06-30",
+        "count": 86400,
+        "file": "2014-06-30.json"
+      },
+      {
+        "date": "2014-07-01",
+        "count": 86400,
+        "file": "2014-07-01.json"
+      },
+      {
+        "date": "2014-07-02",
+        "count": 86400,
+        "file": "2014-07-02.json"
+      },
+      {
+        "date": "2014-07-03",
+        "count": 48627,
+        "file": "2014-07-03.json"
+      }
+    ]
+  },
+  "labels": {
+    "Batt_volt_Min": {
+      "label": "Tensão Mínima da Bateria",
+      "unit": "V"
+    },
+    "PTemp": {
+      "label": "Temperatura do Painel (Logger)",
+      "unit": "°C"
+    },
+    "diags2": {
+      "label": "Diagnóstico 2",
+      "unit": ""
+    },
+    "diag_irga": {
+      "label": "Diagnóstico IRGA",
+      "unit": ""
+    },
+    "diags1": {
+      "label": "Diagnóstico 1",
+      "unit": ""
+    },
+    "RG": {
+      "label": "Radiação Global",
+      "unit": "W/m²"
+    },
+    "NR": {
+      "label": "Radiação Líquida (Saldo)",
+      "unit": "W/m²"
+    },
+    "AirTC": {
+      "label": "Temperatura do Ar",
+      "unit": "°C"
+    },
+    "RH": {
+      "label": "Umidade Relativa",
+      "unit": "%"
+    },
+    "FSOLO": {
+      "label": "Fluxo de Calor no Solo",
+      "unit": "W/m²"
+    }
+  }
+}

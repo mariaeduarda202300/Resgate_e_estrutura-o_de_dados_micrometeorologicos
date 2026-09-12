@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resgate e estruturação de dados micrometeorológicos — Extremo Sul do RS</title>
+<meta name="description" content="Resgate e estruturação de dados micrometeorológicos para estudos atmosféricos no Extremo Sul do Rio Grande do Sul.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="tag"><span class="dot"></span>dados micrometeorológicos</div>
+    <nav><a href="dashboard.html">painel de dados →</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">EXTREMO SUL DO RIO GRANDE DO SUL</p>
+    <h1>Resgate e estruturação de dados micrometeorológicos para estudos atmosféricos no Extremo Sul do Rio Grande do Sul</h1>
+    <p>Neste projeto, resgato e organizo os dados brutos coletados em campo — diagnóstico do sistema e variáveis atmosféricas — estruturando tudo para consulta e visualização.</p>
+
+    <div class="readout">
+      <div><span class="k">PERÍODO COBERTO</span><span class="v" id="r-period">—</span></div>
+      <div><span class="k">TOTAL DE REGISTROS</span><span class="v" id="r-records">—</span></div>
+      <div><span class="k">VARIÁVEIS DISPONÍVEIS</span><span class="v" id="r-vars">—</span></div>
+    </div>
+
+    <a class="btn" href="dashboard.html">Abrir painel de dados</a>
+  </div>
+</section>
+
+<section class="tables">
+  <div class="wrap">
+    <h2>DUAS TABELAS, DOIS RITMOS DE AMOSTRAGEM</h2>
+
+    <div class="table-row ti">
+      <span class="swatch">🔋</span>
+      <div>
+        <h3>Tabela TI — Diagnóstico do sistema</h3>
+        <p>Leituras a cada minuto de saúde do equipamento: tensão mínima da bateria, temperatura do painel do datalogger e códigos de diagnóstico do sensor de gás (IRGA).</p>
+        <div class="vars">Batt_volt_Min · PTemp · diags1 · diags2 · diag_irga</div>
+      </div>
+      <div class="stat"><b id="ti-count">—</b>1 leitura / min</div>
+    </div>
+
+    <div class="table-row tm">
+      <span class="swatch">☁️</span>
+      <div>
+        <h3>Tabela TM — Variáveis meteorológicas</h3>
+        <p>Leituras a cada segundo do ambiente: radiação global e líquida, temperatura do ar, umidade relativa e fluxo de calor no solo.</p>
+        <div class="vars">RG · NR · AirTC · RH · FSOLO</div>
+      </div>
+      <div class="stat"><b id="tm-count">—</b>1 leitura / seg</div>
+    </div>
+  </div>
+</section>
+
+<section class="credits">
+  <div class="wrap">
+    <div class="card">
+      <h2>SOBRE O TRABALHO</h2>
+      <p>Os dados que estou resgatando e estruturando vêm de um datalogger instalado na torre micrometeorológica, referentes ao período de 27/06/2014 a 03/07/2014. Estou organizando tanto o diagnóstico do próprio sistema de coleta quanto as variáveis atmosféricas medidas em campo, para viabilizar as análises do projeto.</p>
+
+      <div class="credit-people">
+        <div>
+          <span class="role">ORIENTADORA DO PROJETO</span>
+          <span class="name">Camila e Silva Gomes</span>
+          <span class="desc">Responsável pela bolsa do projeto e pelo fornecimento dos dados utilizados nesta análise.</span>
+        </div>
+        <div>
+          <span class="role">COORIENTADOR</span>
+          <span class="name">Breno Xavier de Paula</span>
+          <span class="desc">Apoio no desenvolvimento tecnológico do projeto.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>trabalho desenvolvido por Maria Eduarda Corrêa</p>
+  </div>
+</footer>
+
+<script src="assets/js/cloud-cursor.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
