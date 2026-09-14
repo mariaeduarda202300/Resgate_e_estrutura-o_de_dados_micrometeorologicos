@@ -13,8 +13,13 @@
   records.textContent = fmt(m.ti.count + m.tm.count);
   vars.textContent = `${m.ti.columns.length + m.tm.columns.length} canais · 2 tabelas`;
 
-  document.getElementById('ti-count').textContent = fmt(m.ti.count) + ' registros';
-  document.getElementById('tm-count').textContent = fmt(m.tm.count) + ' registros';
-  document.getElementById('ti-vars').textContent = m.ti.columns.join(' · ');
-  document.getElementById('tm-vars').textContent = m.tm.columns.join(' · ');
+  const tiCountEl = document.getElementById('ti-count');
+  const tmCountEl = document.getElementById('tm-count');
+  const tiVarsEl = document.getElementById('ti-vars');
+  const tmVarsEl = document.getElementById('tm-vars');
+
+  if (tiCountEl) tiCountEl.textContent = fmt(m.ti.count) + ' registros';
+  if (tmCountEl) tmCountEl.textContent = fmt(m.tm.count) + ' registros';
+  if (tiVarsEl) tiVarsEl.textContent = m.ti.columns.join(' · ');
+  if (tmVarsEl) tmVarsEl.textContent = m.tm.columns.join(' · ');
 })();
