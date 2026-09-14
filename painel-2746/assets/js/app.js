@@ -67,7 +67,7 @@
     });
   });
 
-  function renderChart(seriesName, unit, points) {
+  function renderChart(seriesName, unit, points, rangeStart, rangeEnd) {
     const data = points.map(([t, v]) => [t, v]);
     const options = {
       chart: {
@@ -86,6 +86,8 @@
       grid: { borderColor: 'rgba(44,47,87,0.08)', strokeDashArray: 4 },
       xaxis: {
         type: 'datetime',
+        min: rangeStart,
+        max: rangeEnd,
         labels: { style: { fontFamily: 'Nunito Sans', fontSize: '11px', colors: '#6b6f9a' } },
       },
       yaxis: {
@@ -95,6 +97,36 @@
       tooltip: { x: { format: 'dd MMM yyyy HH:mm:ss' } },
       dataLabels: { enabled: false },
       markers: { size: 0 },
+      annotations: {
+        xaxis: [
+          {
+            x: rangeStart,
+            borderColor: '#4f7cff',
+            strokeDashArray: 4,
+            label: {
+              text: 'Início',
+              borderColor: '#4f7cff',
+              style: { color: '#fff', background: '#4f7cff', fontFamily: 'Nunito Sans' },
+            },
+          },
+          {
+            x: rangeEnd,
+            borderColor: '#a78bfa',
+            strokeDashArray: 4,
+            label: {
+              text: 'Fim',
+              borderColor: '#a78bfa',
+              style: { color: '#fff', background: '#a78bfa', fontFamily: 'Nunito Sans' },
+            },
+          },
+        ],
+      },
+      noData: {
+        text: 'Nenhum registro no intervalo selecionado',
+        align: 'center',
+        verticalAlign: 'middle',
+        style: { color: '#6b6f9a', fontFamily: 'Nunito Sans', fontSize: '14px' },
+      },
     };
 
     if (chart) {
@@ -111,6 +143,10 @@
       return;
     }
     const values = points.map((p) => p[1]).filter((v) => Number.isFinite(v));
+    if (!values.length) {
+      summaryEl.innerHTML = '';
+      return;
+    }
     const min = Math.min(...values);
     const max = Math.max(...values);
     const avg = values.reduce((a, b) => a + b, 0) / values.length;
@@ -147,7 +183,7 @@
       const MAX_POINTS = 4000;
       const plotted = rows.length > MAX_POINTS ? window.StationDB.lttb(rows, MAX_POINTS) : rows;
 
-      renderChart(label, unit, plotted);
+      renderChart(label, unit, plotted, startMs, endMs);
       renderSummary(rows, unit ? ` ${unit}` : '');
 
       const note = rows.length > MAX_POINTS

@@ -11,7 +11,7 @@
 <header class="panel-header">
   <div class="wrap">
     <h1>painel de dados micrometeorológicos</h1>
-    <a class="back" href="index.html">← voltar</a>
+    <a class="back" href="indice.html">← voltar</a>
   </div>
 </header>
 
@@ -19,22 +19,22 @@
   <div class="wrap">
     <div class="grid">
       <div class="field">
-        <label>TABELA</label>
-        <div class="table-toggle">
+        <label for="table-toggle">TABELA</label>
+        <div class="table-toggle" id="table-toggle">
           <button type="button" class="active" data-table="tm">TM · meteorológica</button>
           <button type="button" data-table="ti">TI · diagnóstico</button>
         </div>
       </div>
       <div class="field">
-        <label>VARIÁVEL</label>
+        <label for="variable">VARIÁVEL</label>
         <select id="variable"></select>
       </div>
       <div class="field">
-        <label>DE</label>
+        <label for="from">DE</label>
         <input type="date" id="from">
       </div>
       <div class="field">
-        <label>ATÉ</label>
+        <label for="to">ATÉ</label>
         <input type="date" id="to">
       </div>
       <div class="field">
