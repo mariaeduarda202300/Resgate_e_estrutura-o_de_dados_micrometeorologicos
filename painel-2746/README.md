@@ -21,5 +21,3 @@ tabela, variável e intervalo de datas.
 
 Não há back-end: tudo roda no navegador de quem acessa o site, o que
 significa que funciona 100% no GitHub Pages.
-
-atamente esse formato.
